@@ -1,0 +1,540 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 100rem;
+    font-family: 'nanumsquare';
+    margin: 0;
+
+    background-color: var(--black);
+    -ms-overflow-style: none;
+}
+
+:root {
+    --white: #dedad6;
+    --black: #212529;
+    --true-white: #FFFFFF;
+    --true-black: #000000;
+    --white-hover: #b3aea9;
+    --staff: #36393f;
+    --staff-hover: #3f4249;
+    --staff-text: #cccccc;
+    --box-shadow: #1f1f1f;
+}
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+    text-decoration-style: none;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    padding-right: 30px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+.main {
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    margin-left: 2rem;
+    color: var(--white);
+    transition-property: all;
+    transition-duration: 0.5s;
+    font-weight: 200;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    max-width: 100px;
+    max-height: 50px;
+}
+
+
+.topbarlists {
+    display: flex;
+    color: var(--white);
+    text-decoration-line: none;
+    list-style: none;
+}
+
+.topbarlists a {
+    color: var(--true-white);
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.topbarlists li {
+    padding: 0rem 1rem;
+}
+
+.topbarlists :hover {
+    color: rgb(177, 177, 177);
+}
+
+ul > li > a {
+    cursor: pointer;
+}
+
+.midbar {
+    width: 100%;
+    height: 25rem;
+    background-color: var(--white);
+}
+
+.circle__picture {
+    display: block;
+}
+
+.circle__picture img {
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.circle__picture img:hover {
+    transform: rotate(720deg);
+    box-shadow: 5px 5px 5px 5px var(--white-hover);
+}
+
+#circle__p {
+    border-radius: 50%;
+    margin-top: 5rem;
+}
+
+.under__picture {
+    color: var(--black);
+    font-size: 28px;
+    padding-top: 20px;
+}
+
+.under__picture b {
+    transition-duration: 0.5s;
+}
+
+.under__picture b:hover {
+    font-size: larger;
+}
+
+.under__picture a {
+    font-size: 15px;
+    font-weight: 10;
+    color: var(--black);
+}
+
+.space {
+    background-color: var(--black);
+    width: screen;
+    height: 15rem;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.botbar__first {
+    background-color: var(--black);
+    width: screen;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.informations {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.informations h1 {
+    color: var(--true-white);
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.informations a {
+    color: var(--true-white);
+    font-size: large;
+}
+
+@keyframes typing {
+    0% {content: "";}
+    2% {content: "ㅋ";}
+    4% {content: "큐";}
+    6% {content: "큐ㅌ";}
+    8% {content: "큐티";}
+    10% {content: "큐티ㄹ";}
+    12% {content: "큐티를";}
+    14% {content: "큐티를 ";}
+    16% {content: "큐티를 ";}
+    18% {content: "큐티를 ㅇ";}
+    20% {content: "큐티를 이";}
+    22% {content: "큐티를 잊";}
+    24% {content: "큐티를 잊ㄴ";}
+    26% {content: "큐티를 잊느";}
+    28% {content: "큐티를 잊는";}
+    30% {content: "큐티를 잊는 ";}
+    32% {content: "큐티를 잊는 ";}
+    34% {content: "큐티를 잊는 ㄷ";}
+    36% {content: "큐티를 잊는 다";}
+    38% {content: "큐티를 잊는 당";}
+    40% {content: "큐티를 잊는 당ㅅ";}
+    42% {content: "큐티를 잊는 당시";}
+    44% {content: "큐티를 잊는 당신";}
+    46% {content: "큐티를 잊는 당신ㅇ";}
+    48% {content: "큐티를 잊는 당신에";}
+    50% {content: "큐티를 잊는 당신에ㄱ";}
+    52% {content: "큐티를 잊는 당신에게";}
+    54% {content: "큐티를 잊는 당신에게게";}
+    56% {content: "큐티를 잊는 당신에게.";}
+    60% {content: "큐티를 잊는 당신에게.";}
+    64% {content: "큐티를 잊는 당신에게.";}
+    68% {content: "큐티를 잊는 당신에게";}
+    71% {content: "큐티를 잊는 당신에";}
+    73% {content: "큐티를 잊는 당신";}
+    75% {content: "큐티를 잊는 당";}
+    76% {content: "큐티를 잊는 ";}
+    77% {content: "큐티를 잊는";}
+    78% {content: "큐티를 잊";}
+    79% {content: "큐티를 ";}
+    80% {content: "큐티를";}
+    81% {content: "큐티";}
+    82% {content: "큐";}
+    84% {content: "";}
+    86% {content: "";}
+    88% {content: "";}
+    90% {content: "";}
+    92% {content: "";}
+    94% {content: "";}
+    96% {content: "";}
+    98% {content: "";}
+    100% {content: "";}
+}
+
+.opacity-1 {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.opacity-2 {
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.opacity-3 {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.thiner {
+    font-weight: 50;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.about__picture {
+    width: screen;
+    height: 12rem;
+    background: url("/img/qtqt.jpg") no-repeat;
+    background-position: top;
+    background-size: cover;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
+    transition-duration: 0.5s;
+    animation: pic-down 17s ease-in-out infinite;
+}
+
+@keyframes pic-down {
+    0% {background-position: top;}
+    25% {background-position: middle;}
+    50% {background-position: bottom;}
+    75% {background-position: middle;}
+    100%{background-position: top;}
+}
+
+.profile {
+    height: 20rem;
+    width: auto;
+}
+
+.staff__and__managers {
+    color: var(--true-white);
+    font-weight: 100;
+    font-size: 32px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.user__profile {
+    color: var(--true-white);
+    margin: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 30rem;
+    text-align: center;
+    background-color: var(--staff);
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: 1000;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    transition-property: all;
+    transition-duration: 0.5s;
+    opacity: 0;
+}
+
+.user__profile img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    float: left;
+    margin-left: 60px;
+    align-items: center;
+}
+
+.user__profile:hover {
+    background-color: var(--staff-hover);
+    box-shadow: 3px 3px 3px 3px var(--box-shadow);
+    width: 35rem;
+    padding-top: 5rem;
+    padding-bottom: 6.5rem;
+    border-radius: 40px;
+}
+
+.user__profile a {
+    color: var(--staff-text);
+    font-size: large;
+}
+
+.botbar__second {
+    padding-top: 10rem;
+}
+
+.move_arrow {
+    animation: MoveArrow 1s ease-in-out infinite;
+}
+
+@keyframes MoveArrow {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+
+.join__id {
+    margin-bottom: 5rem;
+}
+
+.join__text {
+    text-align: center;
+}
+
+.join__text h1 {
+    color: var(--true-white);
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.join__text a {
+    color: var(--true-white);
+    font-weight: bolder;
+    font-size: 24px;
+    
+}
+
+.join__button {
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.join {
+    width: 120px;
+    height: 40px;
+    background-color: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+    border: none;
+    transition: all 0.5s;
+}
+
+.join:hover {
+    font-size: 17px;
+    width: 130px;
+    height: 45px;
+    border-radius: 23px;
+}
+
+button {
+    opacity: 0;
+}
+
+.under__space {
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.footer {
+    padding-top: 1rem;
+}
+
+.footer__container {
+    text-align: center;
+}
+
+.footer__text__here {
+    display: absolute;
+    color: var(--true-white);
+}
+
+@media screen and (max-width:426px) {
+
+    body {
+        font-family: 'Source Sans Pro';
+        margin: 0;
+    
+        background-color: var(--black);
+        -ms-overflow-style: none;
+    }
+
+    .under__picture {
+        color: var(--black);
+        font-size: 20px;
+        padding-top: 15px;
+    }
+    
+    .under__picture b:hover {
+        font-size: 24px;
+    }
+    
+    .topbarlists {
+        display: none;
+    }
+
+    .user__profile {
+        color: var(--true-white);
+        margin: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        width: 15rem;
+        text-align: center;
+        background-color: var(--staff);
+        border-radius: 20px;
+        font-size: 15px;
+        font-weight: 700;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        transition-property: all;
+        transition-duration: 0.5s;
+    }
+    
+    .user__profile img {
+        width: 20%;
+        height: 20%;
+        border-radius: 50%;
+        float: left;
+        margin-left: 40px;
+        align-items: center;
+        margin-top: 0px;
+    }
+    
+    .user__profile:hover {
+        background-color: var(--staff-hover);
+        box-shadow: 5px 5px 5px 5px var(--box-shadow);
+        width: 17rem;
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .join__text h1 {
+        color: var(--true-white);
+        font-weight: 100;
+        font-size: 24px;
+    }
+    
+    .join__text a {
+        color: var(--true-white);
+        font-weight: bolder;
+        font-size: 16px;
+        
+    }
+
+    .join {
+        width: 80px;
+        height: 30px;
+        background-color: var(--white);
+        color: var(--black);
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 20px;
+        transition-duration: 0.2s;
+        border: none;
+    }
+
+    .footer__text__here {
+        font-size: smaller;
+    }
+
+    #mouse-cursor {
+        display: none;
+    }
+}
+
+#mouse-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    transform: translate3d(-100%, -100%, 0);
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 3;
+}
+
+#mouse-cursor > div {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-color: var(--true-white);
+    font-size: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --cursor-scale: 1;
+    transform: scale3d(var(--cursor-scale), var(--cursor-scale), 1);
+    will-change: transform;
+    transition: transform 150ms ease-in-out, background-color 150ms ease-in-out;
+}
+
+#mouse-cursor > div::after {
+    content: attr(data-name);
+    position: absolute;
+    color: var(--true-black);
+    transform: scale(0.45);
+    white-space: nowrap;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QT</title>
+    <link rel="icon" type="image/x-icon" href="pictures/main.ico" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/04fee9afe6.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <nav class="topbar" data-cursor="topbar-cursor">
+        <div class="main">
+            <div class="logo" id="front">
+                
+            </div>
+        </div>
+
+        <ul class="topbarlists">
+            <li><a href="https://www.duranno.com/qt/default.asp" title="생명의 삶 홈페이지 바로가기">생명의 삶 <i class="fa-solid fa-up-right-from-square"></i></a></li>
+            <li><a type="button" value="New window" title="구글링좀 했습니다! :D"  onclick="new_window();">캘린더</a></li>
+            <script>
+                function new_window() {
+                  window.open(
+                    "cal.html",
+                    "Child",
+                    "width=200, height=300, top=50, left=50"
+                  );
+                }
+              </script>
+        </ul>
+    </nav>
+
+    <nav class="midbar" data-cursor="midbar-cursor">
+        <div class="circle__picture" style="text-align: center;">
+            <img id="circle__p" src="img/qt.jpg" width="5%" height="5%">
+        </div>
+        <div class="under__picture" style="text-align: center"><strong><b>큐티</b>시간</strong><br><a>짜잔~ 큐티 알람이 도착했습니다!</a></div>
+    </nav>
+
+    <div class="space" data-cursor="cursor4all"></div>
+
+    <nav class="botbar__first"  id="about" data-cursor="cursor4all">
+        <div class="informations">
+            <h1 class="opacity-1">큐티를 잊는 당신을 위해.</h1>
+            <strong><a class="opacity-2">특별히 제작한 작은 웹페이지</a></strong><br><br>
+            <a class="thiner">사실 별다른 기능은 없습니다 :D</a>
+        </div>
+        <div class="about__picture"></div>
+        <div class="Profile">
+            <h1 class="staff__and__managers">월간 큐티 책</h1>
+            <div class="user__profile">
+                <img src="https://mall.duranno.com/book_images/large/2040702358.jpg">
+                <p>1월<br><a>사무엘상1~5장 외2</a></p>
+            </div>
+            <div class="user__profile">
+                <img src="https://mall.duranno.com/book_images/large/2040771222.jpg">
+                <p>2월<br> <a>사무엘상 18~31장</a></p>
+            </div>
+            <div class="user__profile">
+                <img src="https://mall.duranno.com/book_images/large/2040771391.jpg">
+                <p>3월<br> <a>사무엘상 6~17장</a></p>
+            </div>
+        </div>
+        <div class="join__id" id="join"></div>
+    </nav>
+
+    <nav class="botbar__second" data-cursor="cursor4all">
+        <div class="join__text">
+            <h1 class="opacity-3">책 없이 큐티 하기</h1>
+            <a class="move_arrow"><i class="fa-solid fa-angle-down"></i></a>
+        </div>
+        <div class="join__button">
+            <button class="join" onclick="location.href='https://www.duranno.com/qt/view/bible.asp?qtDate='">바로가기 <i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+        </div>
+        <div class="under__space"></div>
+    </nav>
+
+    <nav class="footer" data-cursor="cursor4all">
+        <div class="footer__container">
+            <p class="footer__text__here">Copyright &copy; west2ij</p>
+        </div>
+    </nav>
+
+    <div id="mouse-cursor">
+        <div></div>
+    </div>
+
+    <script>
+        const cursorParents = document.getElementById('mouse-cursor')
+        const cursorChild = cursorParents.children[0]
+        window.addEventListener('mousemove', mousemove)
+        window.addEventListener('mousedown', mousedown)
+        window.addEventListener('mouseup', mouseup)
+
+        let stage = ''
+        let cursorX = 0, cursorY = 0
+        function mousemove(e) {
+            cursorX = e.clientX - cursorParents.offsetWidth / 2
+            cursorY = e.clientY - cursorParents.offsetHeight / 2
+            cursorParents.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`
+        
+
+        switch(e.target.getAttribute('data-cursor')) {
+            case 'midbar-cursor':
+                if (stage === 'midbar-cursor') return
+                stage = 'midbar-cursor'
+                console.log('midbar-cursor')
+                break
+
+            case 'cursor4all':
+                if (stage === 'cursor4all') return
+                stage = 'cursor4all'
+                console.log('cursor4all')
+                break
+
+            default:
+                if (stage === 'default') return
+                stage = ''
+                console.log('default')
+                break
+        }
+    }
+
+
+        function mousedown(e) {
+            scale *= 0.8
+            cursorChild.style.setProperty('--cursor-scale', scale)
+        }
+        function mouseup(e) {
+            scale *= 1.25
+            cursorChild.style.setProperty('--cursor-scale', scale)
+        }
+
+    </script>

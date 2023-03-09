@@ -1,0 +1,47 @@
+body {
+    max-width: 100rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+
+    background-color: var(--black);
+    -ms-overflow-style: none;
+    text-align: center;
+    align-items: center;
+}
+
+:root {
+    --white: #dedad6;
+    --black: #212529;
+    --true-white: #FFFFFF;
+    --true-black: #000000;
+    --white-hover: #b3aea9;
+    --staff: #36393f;
+    --staff-hover: #3f4249;
+    --staff-text: #cccccc;
+    --box-shadow: #1f1f1f;
+}
+ 
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: var(--black);
+    background-color: var(--black);
+    color: var(--white);
+}
+
+a {
+    text-decoration-style: none;
+}
+
+.date-wrap {
+    background-color: var(--white);
+}
+
+.date-month {
+    font-size: 20px;
+}
